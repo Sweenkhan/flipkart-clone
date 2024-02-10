@@ -1,13 +1,26 @@
- import './App.css';
-//  import axios from "axios"
- import React from 'react'; 
+import React, { useState, createContext } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./component/home/Home.js";
+import Header from "./component/header/Header.js"
+
+export const globalVariable = createContext({});
 
 function App() {
- 
+  const [data, setData] = useState("");
   return (
-    <div className="App">
-     <h1>Hello this is flipkart clone.</h1>
-    </div>
+    <>
+      <div className="App">
+        <globalVariable.Provider value={{ data, setData }}>
+          <BrowserRouter>
+          <Header />
+            <Routes>
+              <Route path="/" element={<Home />}></Route>
+            </Routes>
+          </BrowserRouter>
+        </globalVariable.Provider>
+      </div>
+    </>
   );
 }
 

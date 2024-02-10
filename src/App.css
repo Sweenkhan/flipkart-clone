@@ -1,1 +1,9 @@
- 
+ * {
+     box-sizing: border-box;
+     padding: 0;
+     margin: 0;
+ }
+
+ :root {
+     --secondary: rgb(53, 53, 67);
+ }
