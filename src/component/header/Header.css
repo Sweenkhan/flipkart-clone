@@ -39,10 +39,10 @@ header .header-container .search-container-inner {
     
 }
 
-.close-icon{ 
+.clear-icon{ 
     display: none;
 }
-.close-icon.show{
+.clear-icon.show{
     display: block;
     position: absolute;
     right: 5px;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import CloseIcon from '@mui/icons-material/Close';
+import ClearIcon from '@mui/icons-material/Clear';
 import "./Header.css";
 
 
@@ -10,16 +10,16 @@ function Header() {
 
   const [searchInput, setSearchInput] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
-  const [closeiconShow, setCloseiconShow] = useState(false)
+  const [cleariconShow, setCleariconShow] = useState(false)
     
  
   useEffect(() => {
     if(searchInput === ""){
       setShowDropDown(true) 
-      setCloseiconShow(false)
+       setCleariconShow(false)
     }else{
       setShowDropDown(false)
-      setCloseiconShow(true)
+       setCleariconShow(true)
     }
   },[searchInput])
     
@@ -41,7 +41,7 @@ function Header() {
             value={searchInput} 
             onMouseOver={() => setShowDropDown(true)}
             placeholder="Try Jeans, Shirt, Saree, Kurti" />
-            <div onClick={()=> setSearchInput("")} className={`close-icon ${closeiconShow ? "show" : ""}`} ><CloseIcon sx={{ fontSize:26}} /></div>
+            <div onClick={()=> setSearchInput("")} className={`clear-icon ${cleariconShow ? "show" : ""}`} ><ClearIcon sx={{ fontSize:26}} /></div>
           </div>
           <div className={`search-container-dropDown ${showDropDown ? "show" : ""}`} >
              <p>Kurti</p>
