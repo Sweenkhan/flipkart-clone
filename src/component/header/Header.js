@@ -41,7 +41,7 @@ function Header() {
             value={searchInput} 
             onMouseOver={() => setShowDropDown(true)}
             placeholder="Try Jeans, Shirt, Saree, Kurti" />
-            <div onClick={()=> setSearchInput("")} className={`close-icon ${closeiconShow ? "show" : ""}`} ><CloseIcon sx={{ fontSize:28}} /></div>
+            <div onClick={()=> setSearchInput("")} className={`close-icon ${closeiconShow ? "show" : ""}`} ><CloseIcon sx={{ fontSize:26}} /></div>
           </div>
           <div className={`search-container-dropDown ${showDropDown ? "show" : ""}`} >
              <p>Kurti</p>
