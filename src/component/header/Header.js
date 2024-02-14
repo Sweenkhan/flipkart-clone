@@ -31,6 +31,7 @@ function Header() {
       <div className="header-container">
         <div className="header-logo-container">
           <Link to="/">ShowMe</Link>
+          <span className="logoDesigenBottom"></span>
         </div>
         <div className="search-container">
           <div className="search-container-inner">

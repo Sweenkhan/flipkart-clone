@@ -4,6 +4,7 @@ header .header-container {
     justify-content: space-around;
     height: 70px;
     background-color: white;
+    position: relative;
 }
 
 header .header-logo-container a {
@@ -13,6 +14,13 @@ header .header-logo-container a {
     font-weight: 700;
     font-style: normal;
     text-decoration: none;
+}
+
+.logoDesigenBottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
 }
 
 .search-container {
