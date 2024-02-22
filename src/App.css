@@ -5,5 +5,10 @@
  }
 
  :root {
-     --secondary: rgb(53, 53, 67);
+     /* --secondary: rgb(53, 53, 67); */
+     --primary: #962E2A ;
+     --secondary: #E3867D;
+     --preSecondary: #CEE6F2;
  }
+ /*#1995AD #A1D6E2, #F1F1F2 */
+ /* #962E2A, #E3867D, #CEE6F2 */

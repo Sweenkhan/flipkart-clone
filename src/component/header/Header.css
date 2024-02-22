@@ -1,9 +1,14 @@
+header{
+    font-family: "Roboto", sans-serif;
+}
+
 header .header-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
     height: 70px;
     background-color: white;
+    padding: 0 20px;
 }
 
 .header-logo-container {
@@ -11,9 +16,8 @@ header .header-container {
 }
 
 header .header-logo-container a {
-    color: black;
-    font-size: 2rem;
-    /* font-family: "Roboto", sans-serif; */
+    color: var(--primary);
+    font-size: 2rem; 
     font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
     font-weight: 500;
     font-style: normal;
@@ -26,7 +30,7 @@ header .header-logo-container a {
     left: 0;
     width: 100%;
     height: 6px;
-    background-color: black;
+    background-color:var(--primary);
 }
 
 .logoDesigenBottom::after {
@@ -35,7 +39,7 @@ header .header-logo-container a {
     background-color: white;
     right: 0px;
     bottom: 0px;
-    border-left: 20px solid black;
+    border-left: 20px solid var(--primary);
     border-top: 3px solid transparent;
     border-bottom: 3px solid transparent;
 }
@@ -132,34 +136,59 @@ header .header-container .search-container-inner {
     justify-content: center;
 }
 
-header .header-right-cont span {
+header .header-right-cont{
+    display: flex;
     padding: 0 0.7rem;
-    font-family: "Roboto", sans-serif;
+    margin: auto 5px;
+}
+
+
+header .header-right-cont span { 
     cursor: pointer;
     text-align: center;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
 }
 
-header .header-right-cont span:hover {
-    color: blue;
-}
+header .header-right-cont span:hover { 
+    color: var(--primary);
+} 
 
-.header-right-cont.profile {
+header .profile-cart-cont {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0;
+    margin: 0; 
+    
 }
 
-.header-right-cont.profile span {
-    padding: 0 0 0 1rem;
+header .profile-cont:hover, header .cart-cont:hover{
+   color: var(--primary);
+}
+
+.profile-cont, .cart-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 35px; 
+}
+
+.profile-cont span, .cart-cont span{
+    font-size: 1rem !important;
 }
 
 .header-right .container-for-left-border {
     width: 1px;
     height: 40px;
-    background-color: var(--secondary);
+    background-color: grey;
     opacity: 0.5;
 }
+
+
+
+ /* ---------------------------------------HEADER SECOND SECTION------------------------ */
 
 .header-second-section {
     display: flex;
@@ -171,12 +200,16 @@ header .header-right-cont span:hover {
     display: flex;
     align-items: center;
     height: 40px;
-    cursor: pointer; 
+    cursor: pointer;  
+    letter-spacing: 1px; 
 }
 
 /* .header-second-section-item span{
 } */
 
 .header-second-section-item:hover{
-    border-bottom: 2px solid red;
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+    font-weight: 500; 
 }
+ 

@@ -1,30 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from '@mui/icons-material/Search';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ClearIcon from '@mui/icons-material/Clear';
-import "./Header.css"; 
-
+import SearchIcon from "@mui/icons-material/Search";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ClearIcon from "@mui/icons-material/Clear";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import "./Header.css";
 
 function Header() {
-
   const [searchInput, setSearchInput] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
-  const [cleariconShow, setCleariconShow] = useState(false)
-    
- 
+  const [cleariconShow, setCleariconShow] = useState(false);
+
   useEffect(() => {
-    if(searchInput === ""){
-      setShowDropDown(true) 
-       setCleariconShow(false)
-    }else{
-      setShowDropDown(false)
-       setCleariconShow(true)
+    if (searchInput === "") {
+      setShowDropDown(true);
+      setCleariconShow(false);
+    } else {
+      setShowDropDown(false);
+      setCleariconShow(true);
     }
-  },[searchInput])
-    
-  
- 
+  }, [searchInput]);
 
   return (
     <header>
@@ -36,25 +31,37 @@ function Header() {
         <div className="search-container">
           <div className="search-container-inner">
             <div className="search-icon-container">
-              <SearchIcon sx={{ fontSize: 32}} color="disabled" />
+              <SearchIcon sx={{ fontSize: 32 }} color="disabled" />
             </div>
-            <input type="text" onChange={(e)=>setSearchInput(e.target.value)} 
-            value={searchInput} 
-            onMouseOver={() => setShowDropDown(true)}
-            placeholder="Try Jeans, Shirt, Saree, Kurti" />
-            <div onClick={()=> setSearchInput("")} className={`clear-icon ${cleariconShow ? "show" : ""}`} ><ClearIcon sx={{ fontSize:26}} /></div>
+            <input
+              type="text"
+              onChange={(e) => setSearchInput(e.target.value)}
+              value={searchInput}
+              onMouseOver={() => setShowDropDown(true)}
+              placeholder="Try Jeans, Shirt, Saree, Kurti"
+            />
+            <div
+              onClick={() => setSearchInput("")}
+              className={`clear-icon ${cleariconShow ? "show" : ""}`}
+            >
+              <ClearIcon sx={{ fontSize: 26 }} />
+            </div>
           </div>
-          <div className={`search-container-dropDown ${showDropDown ? "show" : ""}`} >
-             <p>Kurti</p>
-             <p>Saree</p>
-             <p>Jeans</p>
-             <p>Shirt</p>
-             <p>T-Shirt</p>
-             <p>Hoddy</p>
-             <p>Jacket</p>
-             <p>Shoes</p>
-             <p>Top</p>
-             <p>Suit</p>
+          <div
+            className={`search-container-dropDown ${
+              showDropDown ? "show" : ""
+            }`}
+          >
+            <p>Kurti</p>
+            <p>Saree</p>
+            <p>Jeans</p>
+            <p>Shirt</p>
+            <p>T-Shirt</p>
+            <p>Hoddy</p>
+            <p>Jacket</p>
+            <p>Shoes</p>
+            <p>Top</p>
+            <p>Suit</p>
           </div>
         </div>
         <div className="nav-container">
@@ -64,16 +71,22 @@ function Header() {
             </div>
             <div className="container-for-left-border"></div>
             <div className="header-right-cont">
-              <span>Become a Supplier</span>
-            </div>
-            <div className="container-for-left-border"></div>
-            <div className="header-right-cont">
               <span>Newsroom</span>
             </div>
             <div className="container-for-left-border"></div>
-            <div className="header-right-cont profile">
-              <span><AccountCircleIcon /></span>
-              <span>Profile</span>
+            <div className=" profile-cart-cont">
+              <div className="profile-cont">
+                <span>
+                  <AccountCircleIcon sx={{ fontSize: 30 }}/>
+                </span>
+                <span>Profile</span>
+              </div>
+              <div className="cart-cont">
+                <span>
+                  <ShoppingCartIcon sx={{ fontSize: 30 }} />
+                </span>
+                <span>Cart</span>
+              </div>
             </div>
           </div>
         </div>
@@ -82,7 +95,7 @@ function Header() {
       <div className="header-second-section">
         <div className="header-second-section-item">
           <span>Women</span>
-        </div> 
+        </div>
         <div className="header-second-section-item">
           <span>Men</span>
         </div>
