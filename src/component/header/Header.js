@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import SearchIcon from '@mui/icons-material/Search';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ClearIcon from '@mui/icons-material/Clear';
-import "./Header.css";
+import "./Header.css"; 
 
 
 function Header() {
@@ -79,7 +79,32 @@ function Header() {
         </div>
       </div>
       <div className="container-for-border"></div>
-
+      <div className="header-second-section">
+        <div className="header-second-section-item">
+          <span>Women</span>
+        </div> 
+        <div className="header-second-section-item">
+          <span>Men</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Kids</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Beauty & Health</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Jewellery</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Accesssories</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Electronics</span>
+        </div>
+        <div className="header-second-section-item">
+          <span>Bags & Footwear</span>
+        </div>
+      </div>
       <div className="container-for-border"></div>
     </header>
   );

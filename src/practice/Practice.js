@@ -32,6 +32,7 @@ function Practice() {
       console.log(res);
     });
   }, []);
+  
 
   function reverseWord(str) {
     let result = "";
