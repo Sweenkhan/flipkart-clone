@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ClearIcon from "@mui/icons-material/Clear";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import HeaderListDropDown from "./HeaderListDropDown";
 import "./Header.css";
 
 function Header() {
@@ -74,15 +75,15 @@ function Header() {
               <span>Newsroom</span>
             </div>
             <div className="container-for-left-border"></div>
-            <div className=" profile-cart-cont">
+            <div className="profile-cart-cont">
               <div className="profile-cont">
-                <span>
+                <span className="profile-icon">
                   <AccountCircleIcon sx={{ fontSize: 30 }}/>
                 </span>
                 <span>Profile</span>
               </div>
               <div className="cart-cont">
-                <span>
+                <span className="cart-icon">
                   <ShoppingCartIcon sx={{ fontSize: 30 }} />
                 </span>
                 <span>Cart</span>
@@ -118,6 +119,7 @@ function Header() {
           <span>Bags & Footwear</span>
         </div>
       </div>
+      <HeaderListDropDown />
       <div className="container-for-border"></div>
     </header>
   );
