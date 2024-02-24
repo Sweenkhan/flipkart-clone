@@ -7,11 +7,24 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import HeaderListDropDown from "./HeaderListDropDown";
 import "./Header.css";
 
+
 function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
   const [cleariconShow, setCleariconShow] = useState(false);
+  const [showItemListDropDown, setShowItemListDropDown] = useState(false);
+  const [hoverListValue, setHoverListValue] = useState("");
 
+
+  function handeleMouseOver(e){
+           setHoverListValue(e.target.innerText)
+           setShowItemListDropDown(true)
+  }
+
+
+
+
+  // clear search input on condition and dropDown show in search-bar
   useEffect(() => {
     if (searchInput === "") {
       setShowDropDown(true);
@@ -21,6 +34,9 @@ function Header() {
       setCleariconShow(true);
     }
   }, [searchInput]);
+
+console.log(showItemListDropDown, hoverListValue)
+
 
   return (
     <header>
@@ -94,11 +110,12 @@ function Header() {
       </div>
       <div className="container-for-border"></div>
       <div className="header-second-section">
-        <div className="header-second-section-item">
-          <span>Women</span>
+        <div className="header-second-section-item"
+         onMouseOver={handeleMouseOver}  >
+          <span >Women</span>
         </div>
         <div className="header-second-section-item">
-          <span>Men</span>
+          <span onMouseOver={handeleMouseOver}  >Men</span>
         </div>
         <div className="header-second-section-item">
           <span>Kids</span>
@@ -119,7 +136,7 @@ function Header() {
           <span>Bags & Footwear</span>
         </div>
       </div>
-      <HeaderListDropDown />
+      <HeaderListDropDown showOrNot={showItemListDropDown} listNameValue={hoverListValue} changeOnList={()=>setShowItemListDropDown()} />
       <div className="container-for-border"></div>
     </header>
   );

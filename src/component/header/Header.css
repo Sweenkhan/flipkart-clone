@@ -176,13 +176,14 @@ header .profile-cont:hover, header .cart-cont:hover{
     margin-left: 30px; 
 }
 
-.profile-cart-cont .profile-icon, .rofile-cart-cont .cart-icon{
+.profile-cart-cont .profile-icon, .profile-cart-cont .cart-icon{
   height: 30px;
 }
 
 .profile-cont span, .cart-cont span{
-    font-size: 1rem !important;
+font-size: 1rem !important;
 }
+
 
 .header-right .container-for-left-border {
     width: 1px;

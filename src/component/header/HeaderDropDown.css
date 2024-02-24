@@ -4,7 +4,6 @@
 }
 
 .header-secondSec-drop-items{
-    display: flex;
     position: absolute;
     width: 95%;
     padding: 0;
@@ -12,6 +11,14 @@
     border: 1px solid grey;
     border-top: 0;
     box-shadow: 2px 2px 5px lightgray; 
+    display: none;
+}
+
+.header-secondSec-drop-items.women{
+    display: flex;
+}
+.header-secondSec-drop-items.men{
+    display: flex;
 }
 
 .header-secondSec-drop-items>div:nth-child(even){
@@ -40,4 +47,5 @@
 .header-secondSec-drop-items>.item>p:hover{
     opacity: 1;
 }
+
 
