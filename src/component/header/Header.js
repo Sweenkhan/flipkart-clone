@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ClearIcon from "@mui/icons-material/Clear";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; 
-import KidsList from "./dropDownforSecondSection/KidsList";
+import BeautyList from "./dropDownforSecondSection/BeautyList";
 import MensList from "./dropDownforSecondSection/MensList";
 import WomensList from "./dropDownforSecondSection/WomensList";
+import BagsAndFootwearList from "./dropDownforSecondSection/BagsAndFootwearList";
+import JewelleryList from "./dropDownforSecondSection/JewelleryList";
+import ElectronicsList from "./dropDownforSecondSection/ElectronicsList";
+import KitchelList from "./dropDownforSecondSection/KitchenList"
 import "./Header.css";
 
 
@@ -108,29 +113,28 @@ function Header() {
         <div className="header-second-section-item">
           <span>Men</span>
           <MensList />
-        </div>
-        <div className="header-second-section-item">
-          <span>Kids</span>
-          <KidsList />
-        </div>
+        </div> 
         <div className="header-second-section-item">
           <span>Beauty & Health</span>
+          <BeautyList />
         </div>
         <div className="header-second-section-item">
-          <span>Jewellery</span>
-        </div>
-        <div className="header-second-section-item">
-          <span>Accesssories</span>
-        </div>
+          <span>Jewellery & Accesssories</span>
+          <JewelleryList />
+        </div> 
         <div className="header-second-section-item">
           <span>Electronics</span>
+          <ElectronicsList />
+        </div>
+        <div className="header-second-section-item">
+          <span>Home & Kitchen</span>
+          <KitchelList />
         </div>
         <div className="header-second-section-item">
           <span>Bags & Footwear</span>
+          <BagsAndFootwearList />
         </div>
-      </div>
-      {/* <HeaderListDropDown  /> */}
-      {/* showOrNot={showItemListDropDown} listNameValue={hoverListValue} changeOnList={()=>setShowItemListDropDown()} */}
+      </div>  
       <div className="container-for-border"></div>
     </header>
   );
