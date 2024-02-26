@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import ClearIcon from "@mui/icons-material/Clear";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import HeaderListDropDown from "./HeaderListDropDown";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; 
+import KidsList from "./dropDownforSecondSection/KidsList";
+import MensList from "./dropDownforSecondSection/MensList";
+import WomensList from "./dropDownforSecondSection/WomensList";
 import "./Header.css";
 
 
@@ -12,17 +14,7 @@ function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
   const [cleariconShow, setCleariconShow] = useState(false);
-  const [showItemListDropDown, setShowItemListDropDown] = useState(false);
-  const [hoverListValue, setHoverListValue] = useState("");
-
-
-  function handeleMouseOver(e){
-           setHoverListValue(e.target.innerText)
-           setShowItemListDropDown(true)
-  }
-
-
-
+ 
 
   // clear search input on condition and dropDown show in search-bar
   useEffect(() => {
@@ -35,7 +27,6 @@ function Header() {
     }
   }, [searchInput]);
 
-console.log(showItemListDropDown, hoverListValue)
 
 
   return (
@@ -110,15 +101,17 @@ console.log(showItemListDropDown, hoverListValue)
       </div>
       <div className="container-for-border"></div>
       <div className="header-second-section">
-        <div className="header-second-section-item"
-         onMouseOver={handeleMouseOver}  >
-          <span >Women</span>
+        <div className="header-second-section-item" >
+          <span>Women</span>
+          <WomensList />
         </div>
         <div className="header-second-section-item">
-          <span onMouseOver={handeleMouseOver}  >Men</span>
+          <span>Men</span>
+          <MensList />
         </div>
         <div className="header-second-section-item">
           <span>Kids</span>
+          <KidsList />
         </div>
         <div className="header-second-section-item">
           <span>Beauty & Health</span>
@@ -136,7 +129,8 @@ console.log(showItemListDropDown, hoverListValue)
           <span>Bags & Footwear</span>
         </div>
       </div>
-      <HeaderListDropDown showOrNot={showItemListDropDown} listNameValue={hoverListValue} changeOnList={()=>setShowItemListDropDown()} />
+      {/* <HeaderListDropDown  /> */}
+      {/* showOrNot={showItemListDropDown} listNameValue={hoverListValue} changeOnList={()=>setShowItemListDropDown()} */}
       <div className="container-for-border"></div>
     </header>
   );

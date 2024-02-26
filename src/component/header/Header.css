@@ -5,10 +5,10 @@ header{
 header .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 70px;
     background-color: white;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 .header-logo-container {
@@ -194,12 +194,16 @@ font-size: 1rem !important;
 
 
 
+
+
  /* ---------------------------------------HEADER SECOND SECTION------------------------ */
 
 .header-second-section {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 50px;
 }
 
 .header-second-section-item {
@@ -210,9 +214,20 @@ font-size: 1rem !important;
     letter-spacing: 1px;  
 }
 
-/* .header-second-section-item span{
-} */
+.header-secondSec-drop-cont{
+    display: none;
+    justify-content: flex-start;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px; 
+    border: 1px solid grey;
+    border-top: 0;
+    box-shadow: 2px 2px 5px lightgray;  
+    animation: 400ms ease-in 0s 1 normal none running fadeIn;
+}
 
+ 
 .header-second-section-item:hover{
     color: var(--primary);
     border-bottom: 2px solid var(--primary);
@@ -220,3 +235,50 @@ font-size: 1rem !important;
     padding: 0; 
 } 
  
+.header-second-section-item:hover .header-secondSec-drop-cont{
+    display: flex;
+} 
+
+ 
+.header-secondSec-drop-items{ 
+    padding: 0;
+    background-color: white;
+    border-top: 0; 
+    display: flex;
+}
+
+ 
+.header-secondSec-drop-items>div:nth-child(even){
+    background-color: lightblue;
+}
+
+.header-secondSec-drop-items>.item{ 
+    min-width: 150px;
+    padding:1rem;
+}
+
+.header-secondSec-drop-items>.item>h3{
+    margin-bottom: 15px;
+    color: var(--secondary);
+}
+
+.header-secondSec-drop-items>.item>p{
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+    cursor: pointer;
+    opacity: 0.6;
+    color: black;
+}
+
+.header-secondSec-drop-items>.item>p:hover{
+    opacity: 1;
+}
+
+
+@keyframes fadeIn {
+ 0%{
+    opacity: 0;
+ }100%{
+    opacity: 1;
+ }
+}
