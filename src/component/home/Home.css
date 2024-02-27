@@ -2,6 +2,7 @@
  .firstSection-feature, .firstSection-feature-item{
     display: flex; 
     justify-content: center; 
+    align-items: center;
 } 
 
 .home{ 
@@ -10,58 +11,25 @@
 
 .homeContainer{
    flex-direction: column;
+   width: 90%;
 }
 
-
-.home .firstSection-Cnt{
-    background-color: rgb(248, 248, 255); 
-    flex-direction: column;
-    min-height: 336px;
-    padding: 30px;
-    width: 50%;
-    justify-content: flex-start;
-}
-
-.home .firstSection-Cnt>h2{
-    font-size: 3.3rem;
-    padding-bottom: 2rem;  
-}
-
-.home .firstSection-feature{
-    background-color: white;
-    padding: 15px 0;
-}
-
-.home .firstSection-feature-item{
-    padding-left: 8px;
-    width: 33%;
-}
-
-.home .firstSection-feature-item img{
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: 1px solid lightgray ;
-    overflow: hidden;
-    margin-right: 5px;
-}
-
-.home .firstSection-feature-item span{
-    max-width: 80px;
-}
-
-.home .firstSection-Img {
+.home .strait-line-section{
     display: flex;
-    width: 50%;
-    min-height: 336px;
-    position: relative;
-}
-.home .firstSection-Img img{
-    position: absolute;
-    height: 100%;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0; 
+    margin: 2rem 0;
+}
+
+.strait-line-section .strait-line{
+    width: 25%;
+    height: 1px;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.home .strait-line-section span{
+    font-size: 2.3rem;
+    font-weight: 500;
 }

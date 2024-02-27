@@ -232,6 +232,7 @@ header .cart-cont:hover {
     right: 50px;
     border: 1px solid rgba(128, 128, 128, 0.493);
     border-top: 0;
+    background-color: white;
     box-shadow: 2px 2px 5px lightgray;
     animation: 400ms ease-in 0s 1 normal none running fadeIn;
     z-index: 100;
@@ -284,7 +285,6 @@ header .cart-cont:hover {
 .header-secondSec-drop-items>.item>p:hover {
     opacity: 1;
 }
-
 
 @keyframes fadeIn {
     0% {
