@@ -2,7 +2,16 @@
     font-family: "Roboto", sans-serif;
 }
 
-header .header-container {
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.header .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -16,7 +25,7 @@ header .header-container {
     margin-right: 20px;
 }
 
-header .header-logo-container a {
+.header .header-logo-container a {
     color: var(--primary);
     font-size: 2rem;
     font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
@@ -65,7 +74,7 @@ header .header-logo-container a {
     display: flex;
 }
 
-header .header-container .search-container-inner {
+.header .header-container .search-container-inner {
     padding: 0.6rem 0.3rem;
     width: 400px;
     border: 1px solid black;
@@ -137,23 +146,23 @@ header .header-container .search-container-inner {
     justify-content: center;
 }
 
-header .header-right-cont {
+.header .header-right-cont {
     display: flex;
     padding: 0 0.7rem;
 }
 
-header .header-right-cont span {
+.header .header-right-cont span {
     cursor: pointer;
     text-align: center;
     letter-spacing: 1px;
     font-size: 1.1rem;
 }
 
-header .header-right-cont span:hover {
+.header .header-right-cont span:hover {
     color: var(--primary);
 }
 
-header .profile-cart-cont {
+.header .profile-cart-cont {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -163,8 +172,8 @@ header .profile-cart-cont {
 
 }
 
-header .profile-cont:hover,
-header .cart-cont:hover {
+.header .profile-cont:hover,
+.header .cart-cont:hover {
     color: var(--primary);
 }
 
@@ -201,6 +210,7 @@ header .cart-cont:hover {
     justify-content: space-between;
     padding: 0 30px;
     position: relative;
+    z-index: 2;
 }
 
 .header-second-section-item {
@@ -235,7 +245,7 @@ header .cart-cont:hover {
     background-color: white;
     box-shadow: 2px 2px 5px lightgray;
     animation: 400ms ease-in 0s 1 normal none running fadeIn;
-    z-index: 100;
+    z-index: 10;
 }
 
 .header-second-section-item:hover { 

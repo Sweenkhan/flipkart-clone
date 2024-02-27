@@ -35,7 +35,7 @@ function Header() {
 
 
   return (
-    <header>
+    <div className="header">
       <div className="header-container">
         <div className="header-logo-container">
           <Link to="/">ShowMe</Link>
@@ -136,7 +136,7 @@ function Header() {
         </div>
       </div>  
       <div className="container-for-border"></div>
-    </header>
+    </div>
   );
 }
 
