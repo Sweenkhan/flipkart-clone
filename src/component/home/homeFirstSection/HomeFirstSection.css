@@ -1,14 +1,15 @@
 .home-firstSection{
     width: 100%;
     background-color: rgb(248, 248, 255); 
+    justify-content: space-between;
 }
 
 .home .firstSection-Cnt{
     flex-direction: column;
-    min-height: 336px;
+    min-height: 340px;
     padding: 30px;
-    width: 50%;
-    justify-content: flex-start; 
+    max-width: 55%;
+    justify-content: flex-start;   
 }
 
 .home .firstSection-Cnt>h2{
@@ -17,10 +18,9 @@
 }
 
 .home .firstSection-feature{
-    background-color: white;
-    padding: 15px 0;
-    margin: 1.5rem 0;
-    width: 89%;
+    background-color: white; 
+    margin: 2.3rem 0;
+    width: 90%;
 }
 
 .home .firstSection-feature-item{
@@ -34,7 +34,7 @@
     border-radius: 50%;
     border: 1px solid lightgray ;
     overflow: hidden;
-    margin-right: 5px;
+    margin-right: 5px;  
 }
 
 .firstSection-feature-item-img img{
@@ -58,12 +58,13 @@
 
 .home .download-app-home-button img{
     margin: 0 1rem;
+ 
 }
 
 .home .firstSection-Img {
     display: flex;
-    width: 50%;
-    min-height: 336px;
+    width: 45%;
+    min-height: 370px;
     position: relative;
 }
 .home .firstSection-Img img{

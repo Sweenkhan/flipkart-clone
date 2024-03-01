@@ -23,7 +23,7 @@
 }
 
 .strait-line-section .strait-line{
-    width: 25%;
+    width: 22%;
     height: 1px;
     background-color: black;
     opacity: 0.5;
@@ -32,4 +32,8 @@
 .home .strait-line-section span{
     font-size: 2.3rem;
     font-weight: 500;
+}
+
+.firstSection-feature-item>span{
+    padding-left: 5px;
 }

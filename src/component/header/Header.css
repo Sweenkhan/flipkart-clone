@@ -17,7 +17,7 @@
     justify-content: space-between;
     height: 70px;
     background-color: white;
-    padding: 0 50px;
+    padding: 0 50px; 
 }
 
 .header-logo-container {
@@ -140,28 +140,89 @@
     opacity: 0.3;
 }
 
+
+/* ***************************** HEADER TOP-RIGHT SECTION **********************/
 .header-container .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.header .header-right-cont {
+    display: flex;  
+    align-items: center;
+    padding: 0 0.7rem;
+    position: relative;
+    height: 100%;
+}
+
+.header .header-download-app{ 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.header .header-right-cont {
-    display: flex;
-    padding: 0 0.7rem;
+.header-download-app .mobileIcon{
+    padding-top: 3px;
+    padding-right: 5px;
 }
+
+.header-right-cont.download-app-container{
+    position: relative;
+    padding-bottom: 1px;
+}
+
+ .download-app-container:hover{
+    font-weight: 500;
+    padding-bottom: 0;
+    border-bottom: 2px solid var(--primary);
+}
+ 
+ .download-app-container:hover .download-app-dropDown{
+  display: flex;
+  color: black;
+ }
+
+.download-app-dropDown{
+    position: absolute;
+    width: 110%;
+    background-color: white;
+    top: 105%;
+    left: -8px; 
+    z-index: 12;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 10px 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 1px 4px 4px black;
+    animation: 400ms ease-in 0s 1 normal none running fadeIn;
+}
+
+.android-app-download, .ios-app-download{ 
+    margin-top: 1rem;
+    width: 155px;
+    height: 52px;
+}
+.android-app-download img, .ios-app-download img{
+    width: 100%;
+    height: 100%;
+}
+ 
 
 .header .header-right-cont span {
     cursor: pointer;
     text-align: center;
     letter-spacing: 1px;
     font-size: 1.1rem;
-}
-
-.header .header-right-cont span:hover {
+} 
+.header .header-right-cont:hover {
     color: var(--primary);
 }
-
+ 
 .header .profile-cart-cont {
     display: flex;
     align-items: center;
@@ -182,7 +243,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-left: 30px;
+    margin-left: 26px;
 }
 
 .profile-cart-cont .profile-icon,

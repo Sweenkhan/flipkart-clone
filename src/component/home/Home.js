@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Home.css";
 import HomeFirstSection from './homeFirstSection/HomeFirstSection';
+import HomeSecondSection from './homeSecondSection/HomeSecondSection';
 
 function Home() {
   return (
@@ -14,6 +15,7 @@ function Home() {
           <div className='strait-line'></div>
          </div>
          
+         <HomeSecondSection />
       </div>
     </div>
   )

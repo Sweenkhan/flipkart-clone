@@ -1,20 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
+import "./Header.css"; 
+import {SearchIcon, ClearIcon, BeautyList, MensList, WomensList, BagsAndFootwearList, JewelleryList, ElectronicsList, KitchelList, RightSection} from  "./importFilesForHeader.js"
 
-import SearchIcon from "@mui/icons-material/Search";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import ClearIcon from "@mui/icons-material/Clear";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart"; 
-import BeautyList from "./dropDownforSecondSection/BeautyList";
-import MensList from "./dropDownforSecondSection/MensList";
-import WomensList from "./dropDownforSecondSection/WomensList";
-import BagsAndFootwearList from "./dropDownforSecondSection/BagsAndFootwearList";
-import JewelleryList from "./dropDownforSecondSection/JewelleryList";
-import ElectronicsList from "./dropDownforSecondSection/ElectronicsList";
-import KitchelList from "./dropDownforSecondSection/KitchenList"
-import "./Header.css";
-
-
+ 
 function Header() {
   const [searchInput, setSearchInput] = useState("");
   const [showDropDown, setShowDropDown] = useState(false);
@@ -36,6 +25,7 @@ function Header() {
 
   return (
     <div className="header">
+
       <div className="header-container">
         <div className="header-logo-container">
           <Link to="/">ShowMe</Link>
@@ -77,34 +67,11 @@ function Header() {
             <p>Suit</p>
           </div>
         </div>
-        <div className="nav-container">
-          <div className="header-right">
-            <div className="header-right-cont">
-              <span>Download App</span>
-            </div>
-            <div className="container-for-left-border"></div>
-            <div className="header-right-cont">
-              <span>Newsroom</span>
-            </div>
-            <div className="container-for-left-border"></div>
-            <div className="profile-cart-cont">
-              <div className="profile-cont">
-                <span className="profile-icon">
-                  <AccountCircleIcon sx={{ fontSize: 30 }}/>
-                </span>
-                <span>Profile</span>
-              </div>
-              <div className="cart-cont">
-                <span className="cart-icon">
-                  <ShoppingCartIcon sx={{ fontSize: 30 }} />
-                </span>
-                <span>Cart</span>
-              </div>
-            </div>
-          </div>
-        </div>
+       <RightSection />  
       </div>
+
       <div className="container-for-border"></div>
+
       <div className="header-second-section">
         <div className="header-second-section-item" >
           <span>Women</span>
@@ -135,7 +102,8 @@ function Header() {
           <BagsAndFootwearList />
         </div>
       </div>  
-      <div className="container-for-border"></div>
+
+      <div className="container-for-border"></div> 
     </div>
   );
 }

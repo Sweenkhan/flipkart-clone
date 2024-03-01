@@ -20,12 +20,16 @@ function HomeFirstSection() {
                </div>
                <div className='container-for-left-border'></div>
                <div className='firstSection-feature-item'>
+               <div className='firstSection-feature-item-img'>
                 <img src={shippingImg} alt="cash-delivery-img" />
+                </div>
                 <span>Cash on Delivery</span>
                </div>
                <div className='container-for-left-border'></div>
                <div className='firstSection-feature-item'>
+               <div className='firstSection-feature-item-img'>
                 <img src={cashOnDeliveryImg} alt="easy-return-img" />
+                </div>
                 <span>Easy Returns</span>
                </div>
             </div>

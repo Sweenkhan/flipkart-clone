@@ -13,4 +13,12 @@
  /*#1995AD #A1D6E2, #F1F1F2 */
  /* #962E2A, #E3867D, #CEE6F2 */
 
-  
+  body{
+    margin: 0px;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    /* line-height: 1.5; */
+    text-align: left;
+  }
