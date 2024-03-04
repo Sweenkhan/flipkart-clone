@@ -9,7 +9,9 @@ function HomeSecondSection() {
   return (
     <div className='home-secondSection'> 
       <h2>Be fashion forward</h2>
+
      <div className='be-fashion-forwardStore'>
+     
       <div className='fashion-women-store'>
           <img src={womenStoreImg} alt='women-store' />
       </div>

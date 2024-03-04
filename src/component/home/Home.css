@@ -40,8 +40,8 @@
 }
  
 
-
-
+ 
+/* ------------------------------RESPONSIVENESS BREAK POINTS------------------------- */
 @media screen and (max-width: 1024px){ 
     .homeContainer{ 
         width: 100%;

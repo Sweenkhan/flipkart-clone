@@ -7,6 +7,7 @@ function Home() {
   return (
     <div className='home'>
       <div className='homeContainer'>
+
          <HomeFirstSection />
 
          <div className='strait-line-section'>
@@ -16,6 +17,7 @@ function Home() {
          </div>
          
          <HomeSecondSection />
+         
       </div>
     </div>
   )

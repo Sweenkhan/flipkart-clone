@@ -34,7 +34,7 @@ function WomensList() {
             <p>Shorts</p>
             <p>Skirts</p>
         </div>
-        <div className='item'>
+        <div className='item sleewear'>
             <h3>Sleepwear</h3>
             <p>Nightsuits</p>
             <p>Babydolls</p>

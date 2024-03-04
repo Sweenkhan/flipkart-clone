@@ -79,7 +79,7 @@
 }
 
 
-
+/* ------------------------------RESPONSIVENESS BREAK POINTS------------------------- */
 @media screen and (max-width: 1024px) {
     .home .firstSection-Cnt{
         padding: 30px 5px 30px 20px;

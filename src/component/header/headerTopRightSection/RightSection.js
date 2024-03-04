@@ -26,7 +26,7 @@ function RightSection() {
 
             </div>
             <div className="container-for-left-border"></div>
-            <div className="header-right-cont">
+            <div className="header-right-cont newsroom">
               <span>Newsroom</span>
             </div>
             <div className="container-for-left-border"></div>

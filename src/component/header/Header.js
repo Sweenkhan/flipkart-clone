@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom"; 
 import "./Header.css"; 
+import "./HeaderSecondSection.css";
 import {SearchIcon, ClearIcon, BeautyList, MensList, WomensList, BagsAndFootwearList, JewelleryList, ElectronicsList, KitchelList, RightSection} from  "./importFilesForHeader.js"
 
  
@@ -81,7 +82,7 @@ function Header() {
           <span>Men</span>
           <MensList />
         </div> 
-        <div className="header-second-section-item">
+        <div className="header-second-section-item beauty-list">
           <span>Beauty & Health</span>
           <BeautyList />
         </div>
@@ -93,7 +94,7 @@ function Header() {
           <span>Electronics</span>
           <ElectronicsList />
         </div>
-        <div className="header-second-section-item">
+        <div className="header-second-section-item home-list">
           <span>Home & Kitchen</span>
           <KitchelList />
         </div>

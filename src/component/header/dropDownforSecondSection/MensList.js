@@ -33,12 +33,7 @@ function MensList() {
           <p>Sandals</p>
           <p>Formal Shoes</p>
           <p>Snickers</p>
-        </div>
-        <div className="item">
-          <h3>Ethnic Wear</h3>
-          <p>Men Kurtas</p>
-          <p>Ethnic Jacket</p>
-        </div>
+        </div> 
       </div>
     </div>
   );
