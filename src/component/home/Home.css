@@ -6,7 +6,7 @@
 } 
 
 .home{ 
-    padding: 150px 50px 0;  
+    padding: 150px 50px 50px;  
 }
 
 .homeContainer{
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin: 2rem 0;
+    margin: 3rem 0 2rem;
 }
 
 .strait-line-section .strait-line{
@@ -32,8 +32,24 @@
 .home .strait-line-section span{
     font-size: 2.3rem;
     font-weight: 500;
+    text-align: center;
 }
 
 .firstSection-feature-item>span{
     padding-left: 5px;
+}
+ 
+
+
+
+@media screen and (max-width: 1024px){ 
+    .homeContainer{ 
+        width: 100%;
+     }
+}
+
+@media screen and (max-width: 769px){ 
+    .home{ 
+        padding: 150px 25px 50px;  
+    }
 }

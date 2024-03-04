@@ -1,13 +1,97 @@
 .home-secondSection{
+    flex-direction: column;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: 15px;
-    width: 100%; 
-    
-    /* background-repeat: no-repeat; */
+    align-items: center;
+    justify-content: center; 
+    width: 100%;  
     background-size: 100% 100%; 
     padding: 30px 10px;
     border-radius: 5px;
     background-image: url("../../images/fashionForwardImg.webp");
+}
+
+.home-secondSection>h2{
+    color: white;
+    font-size: 2.3rem;
+    display: none;
+}
+
+.be-fashion-forwardStore{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 18px;
+    padding-top: 50px;
+}
+
+.fashion-women-store img{
+    border-radius: 12px;
+    cursor: pointer; 
+}
+
+.fashion-mens-store{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fashion-mens-store>.mens-store, .fashion-mens-store>.kids-store {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+} 
+
+@media screen and (max-width: 1200px){
+
+    .be-fashion-forwardStore{
+        padding-top: 40px;
+        flex-direction: row-reverse;
+        align-items: flex-end; 
+        gap: 20px;
+        padding-left: 20px;
+    }
+    
+    .fashion-women-store{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .fashion-women-store img{
+        width: 90%;
+    }
+    .fashion-mens-store{
+    flex-direction: column;
+    gap: 20px;
+    }
+
+} 
+
+@media screen and (max-width: 769px){
+    
+     .home-secondSection{
+        padding: 20px 10px;
+        justify-content: center;
+    }
+    .home-secondSection>h2{
+        display: block;
+        text-align: center;
+    }
+    
+    .be-fashion-forwardStore{
+        align-items: center;
+        gap: 20px;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    .fashion-mens-store{
+    flex-direction: row;
+    justify-content: center;
+    }
+
+    .fashion-mens-store img{
+        width: 80%;
+    }
 }

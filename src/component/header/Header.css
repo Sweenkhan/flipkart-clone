@@ -263,8 +263,9 @@
     opacity: 0.5;
 }
 
-/* ---------------------------------------HEADER SECOND SECTION------------------------ */
 
+
+/* ---------------------------------------HEADER SECOND SECTION------------------------ */
 .header-second-section {
     display: flex;
     align-items: center;
@@ -272,16 +273,17 @@
     padding: 0 30px;
     position: relative;
     z-index: 2;
+    min-height: 45px;
 }
 
 .header-second-section-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 40px;
+    justify-content: center; 
     cursor: pointer;
     padding: 0 20px 2px;
     border: none;
+    min-height: 45px
 }
 
 .header-second-section-item span{
@@ -290,7 +292,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 40px;
+    min-height: 45px;
     width: 100%;
 }
  
