@@ -2,6 +2,7 @@ import React from 'react';
 import "./Home.css";
 import HomeFirstSection from './homeFirstSection/HomeFirstSection';
 import HomeSecondSection from './homeSecondSection/HomeSecondSection';
+import HomeThirdSection from './homeThirdSection/HomeThirdSection';
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
          </div>
          
          <HomeSecondSection />
+         <HomeThirdSection />
          
       </div>
     </div>

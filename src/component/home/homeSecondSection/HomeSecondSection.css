@@ -8,6 +8,7 @@
     padding: 30px 10px;
     border-radius: 5px;
     background-image: url("../../images/fashionForwardImg.webp");
+    margin-bottom: 60px;
 }
 
 .home-secondSection>h2 {
@@ -95,6 +96,8 @@
     .fashion-mens-store {
         flex-direction: row;
         justify-content: center;
+        align-items: center;
+        gap: 0;
     }
 
     .fashion-mens-store img {

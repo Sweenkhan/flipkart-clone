@@ -1,0 +1,145 @@
+.home-thirdSection { 
+    flex-direction: column;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-size: 100% 100%;
+    padding: 25px;
+    padding-top: 50px;
+    border-radius: 5px;
+    background-image: url("../../images/esentialimage.webp"); 
+    position: relative;
+}
+.covering-extra-part{
+    position: absolute;
+    content: "";
+    width: 300px;
+    height: 230px;
+    background-color: #7c005e;
+    z-index: 0;
+    left: 0;
+}
+
+.esentialStore-cnt{
+    display: flex;  
+    padding: 50px 15px 15px;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.esentialStore{
+    display: flex;
+    gap: 25px; 
+}
+
+.esentialStore-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.esentialStore-item>button{
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2rem;
+    background-color: #5a0a45;
+    color: white;
+    font-weight: 600;
+    width: 80%;
+    border: 2px solid white;
+}
+
+.esentialBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    padding-top: 90px;
+    align-self: flex-start;
+}
+
+.esentialBtn>h2{
+    font-size: 2.5rem;
+    color: white;
+}
+
+.esentialBtn>button{
+    padding-top: 50px;
+padding: 0.8rem 1.5rem;
+border-radius: 10px;
+border: none;
+font-size: 1.5rem;
+background-color: #5a0a45;
+color: white;
+font-weight: 600;
+width: 80%;
+margin-top: 20px;
+border: 2px solid white;
+}
+
+@media screen and (max-width: 1200px){
+    .esentialStore{
+        display: flex;
+        gap: 8px;
+    }
+    .esentialStore-cnt{
+        padding-right: 0;
+        gap: 10px;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+    
+    .home-thirdSection { 
+        align-items: center;
+        justify-content: center;
+        padding-top: 0;
+    }
+    
+    .esentialStore-cnt{
+        flex-direction: column-reverse;
+        justify-self: center; 
+    }
+    .esentialBtn{
+        padding-top: 0;
+        align-self: center;
+        margin-bottom: 20px;
+    } 
+    .esentialStore{
+        gap: 20px;
+    }
+    .esentialBtn>button{
+        margin-top: 5px;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+    .esentialStore{
+        gap: 5px;
+    }
+    .esentialStore-item{
+        width: 80%;
+    }
+    .esentialStore-item img{
+        width: 80%;
+    }
+    .esentialBtn>h2{
+        font-size: 2rem;
+        color: white;
+    }
+    .esentialBtn>button{
+        font-size: 1rem;
+    }
+    .esentialStore-item>button{
+        font-size: 0.8rem;
+        width: 70%;
+    }
+}
+ 
