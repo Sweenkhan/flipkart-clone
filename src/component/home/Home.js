@@ -3,9 +3,12 @@ import "./Home.css";
 import HomeFirstSection from './homeFirstSection/HomeFirstSection';
 import HomeSecondSection from './homeSecondSection/HomeSecondSection';
 import HomeThirdSection from './homeThirdSection/HomeThirdSection';
+import HomeFourthSection from './homeFourthSection/HomeFourthSection';
+import Products from '../product/Products';
 
 function Home() {
   return (
+     
     <div className='home'>
       <div className='homeContainer'>
 
@@ -19,8 +22,9 @@ function Home() {
          
          <HomeSecondSection />
          <HomeThirdSection />
-         
+         <HomeFourthSection />
       </div>
+      <Products />
     </div>
   )
 }

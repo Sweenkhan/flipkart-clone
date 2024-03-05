@@ -10,6 +10,7 @@
     border-radius: 5px;
     background-image: url("../../images/esentialimage.webp"); 
     position: relative;
+    margin-bottom: 70px;
 }
 .covering-extra-part{
     position: absolute;
@@ -141,7 +142,8 @@ border: 2px solid white;
     }
     .esentialStore-item>button{
         font-size: 0.8rem;
-        width: 70%;
+        padding: 5px;
+        min-width: 80%;
     }
 }
  

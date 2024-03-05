@@ -1,0 +1,18 @@
+.products-container{  
+    display: flex;
+    justify-content: flex-start; 
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 50px;
+    flex-direction: column;
+}
+
+.products-container>h1{
+    font-weight: 400;
+    margin: 20px 0;
+}
+
+.all-products-container{
+    display: flex;
+    
+}
