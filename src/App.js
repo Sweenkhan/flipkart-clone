@@ -6,6 +6,7 @@ import Header from "./component/header/Header.js"
 
 export const globalVariable = createContext({});
 
+
 function App() {
   const [data, setData] = useState("");
   return (
