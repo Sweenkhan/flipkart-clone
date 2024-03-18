@@ -4,6 +4,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import androidImg from "../../images/androidImg.png";
 import istoreImg from "../../images/istoreImg.png";
+import { Link } from 'react-router-dom';
 
 function RightSection() {
   return (
@@ -41,7 +42,7 @@ function RightSection() {
                 <span className="cart-icon">
                   <ShoppingCartIcon sx={{ fontSize: 30 }} />
                 </span>
-                <span>Cart</span>
+                <span><Link to="/cart">Cart</Link>  </span>
               </div>
             </div>
           </div>
