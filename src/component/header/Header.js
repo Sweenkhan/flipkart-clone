@@ -56,6 +56,7 @@ function Header() {
               showDropDown ? "show" : ""
             }`}
           >
+          <h4 style={{width: "100%", textAlign: "center", paddingBottom: "5px"}}>Popular Searches</h4>
             <p>Kurti</p>
             <p>Saree</p>
             <p>Jeans</p>

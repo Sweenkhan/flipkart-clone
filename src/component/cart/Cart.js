@@ -1,6 +1,8 @@
 import React from 'react'
 import cartImg from "../images/cartImg.png"
 import { Link } from 'react-router-dom';
+import "./Cart.css"
+
 
 function Cart() {
   return (
@@ -12,7 +14,7 @@ function Cart() {
                 <img src={cartImg} alt='emptyCartImg' />
             </picture>
             <h3>Your cart is empty</h3>
-            <div><Link to="/" >View Products</Link> </div>
+            <div className='viewProductCnt'><Link to="/" >View Products</Link> </div>
             </div>
         </div>
     </div>

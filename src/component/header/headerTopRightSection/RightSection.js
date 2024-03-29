@@ -4,9 +4,19 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import androidImg from "../../images/androidImg.png";
 import istoreImg from "../../images/istoreImg.png";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function RightSection() {
+
+  let navigate = useNavigate()
+
+  function handleCartClick(){
+      //  e.preventDefault();
+       navigate("/cart")
+  }
+
+
   return (
     <div className="header-right">
             <div className="header-right-cont download-app-container">
@@ -38,11 +48,11 @@ function RightSection() {
                 </span>
                 <span>Profile</span>
               </div>
-              <div className="cart-cont">
+              <div className="cart-cont" onClick={() => handleCartClick()}>
                 <span className="cart-icon">
                   <ShoppingCartIcon sx={{ fontSize: 30 }} />
                 </span>
-                <span><Link to="/cart">Cart</Link>  </span>
+                <span> Cart  </span>
               </div>
             </div>
           </div>

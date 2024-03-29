@@ -1,0 +1,33 @@
+.cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.cart .container, .cart .emptyCartCont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.cart .emptyCartCont{
+    padding-top: 100px;
+    gap: 18px;
+}
+
+.emptyCartCont h3{
+    padding-bottom: 15px;
+    font-weight: 400;
+}
+.viewProductCnt a{
+    text-decoration:none;
+    border: 1px solid rgb(159, 32, 137);
+    color: rgb(159, 32, 137);
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer; 
+}
