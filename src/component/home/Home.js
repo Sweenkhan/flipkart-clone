@@ -4,7 +4,8 @@ import HomeFirstSection from './homeFirstSection/HomeFirstSection';
 import HomeSecondSection from './homeSecondSection/HomeSecondSection';
 import HomeThirdSection from './homeThirdSection/HomeThirdSection';
 import HomeFourthSection from './homeFourthSection/HomeFourthSection';
-import Products from '../product/Products';
+// import Products from '../product/Products';
+import HomeProductSection from './homeProductSection/HomeProductSection';
 
 function Home() {
   return (
@@ -24,7 +25,8 @@ function Home() {
          <HomeThirdSection />
          <HomeFourthSection />
       </div>
-      <Products />
+      {/* <Products /> */}
+      <HomeProductSection />
     </div>
   )
 }
