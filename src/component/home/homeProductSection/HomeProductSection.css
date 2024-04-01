@@ -1,0 +1,43 @@
+.cart, .cartContainer, .cart .productDetail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartContainer{
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 20px; 
+}
+
+.productDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 240px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+}
+.productImgCnt{
+    display: flex; 
+}
+
+.productImgCnt img{
+    width: 190px;
+    height: 200px;
+}
+
+.cart .productDetail{
+   flex-direction: column; 
+   text-align: center;
+   opacity: 0.8;
+}
+
+.productDetail .discountSpan{
+    color: green;
+    font-size: 14px;
+    letter-spacing: -1px;
+}
