@@ -33,7 +33,7 @@ useEffect(() => {
               </div>
               <div className='productDetail'>
                 <p>{(product.title.length > 20) ? `${product.title.substring(0, 20)}...`: product.title}</p>
-                 
+                 <p className="freeDelivery-btn">free delivery</p>
                 <h3>${product.price}<span className='discountSpan'>{`  ${discount[Math.floor(Math.random() * discount.length)]}% off`}</span></h3>
               </div>
             </div>
