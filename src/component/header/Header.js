@@ -41,7 +41,7 @@ function Header() {
               type="text"
               onChange={(e) => setSearchInput(e.target.value)}
               value={searchInput}
-              onMouseOver={() => setShowDropDown(true)}
+              onMouseOver={() => (searchInput === "")&& setShowDropDown(true)}
               placeholder="Try Jeans, Shirt, Saree, Kurti"
             />
             <div
