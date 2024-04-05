@@ -12,6 +12,7 @@ useEffect(() => {
   .then((result) => {
         if(result.data.status === 200){
           setProducts(result.data.products)
+          console.log(result.data.products)
         }
   }).catch((err) => {
        console.log(err)
@@ -51,6 +52,10 @@ function randomDiscount(discount){
                 <span className='discountSpan'>{`  ${gotDiscount}% off`}</span>
                 </h3>
                  <p className="freeDelivery-btn">Free Delivery</p>
+                 <div className='customerReviews'>
+                 <p className='rating'>{product?.rating?.rate}</p>
+                 <p className='review'>{product?.rating?.count}</p>
+                 </div> 
               </div>
             </div>
           )
