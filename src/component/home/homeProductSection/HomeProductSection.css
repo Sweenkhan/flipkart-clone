@@ -1,19 +1,18 @@
-.cart, .cartContainer, .cart .productDetail{
+.productCnt, .products, .productCnt .productDetail{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.cartContainer{
+.productCnt .products{
     flex-wrap: wrap;
     margin-top: 100px;
     gap: 20px; 
 }
 
-.productDiv{
+.productCnt .productDiv{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
     flex-direction: column;
     max-width: 240px;
     border: 1px solid rgba(128, 128, 128, 0.171);
@@ -21,30 +20,31 @@
     padding: 10px;
     gap: 20px;
 }
-.productImgCnt{
+.productCnt .productImgCnt{
     display: flex; 
+    justify-content: center;
 }
 
-.productImgCnt img{
-    width: 190px;
+.productCnt .productImgCnt img{
+    width: 210px;
     height: 200px;
 }
 
-.cart .productDetail{
-   flex-direction: column; 
-   /* text-align: center; */
+.productCnt .productDetail{
+   flex-direction: column;  
    opacity: 0.8;
    gap: 10px;
    align-items: flex-start;
+   padding: 5px;
 }
 
-.productDetail .discountSpan{
+.productCnt .productDetail .discountSpan{
     color: green;
     font-size: 14px;
     letter-spacing: -1px;
 }
 
-.productDetail .freeDelivery-btn{
+.productCnt .productDetail .freeDelivery-btn{
     background-color: aliceblue;
     padding: 0.4rem ;
     cursor: pointer;
@@ -52,7 +52,7 @@
     font-size: 14px;
 }
 
-.productDetail .originalPrice{
+.productCnt .productDetail .originalPrice{
     text-decoration: line-through;
     font-weight: 400;
     letter-spacing: -1px;
@@ -60,8 +60,35 @@
     margin: 0 5px;
 }
 
-.customerReviews{
+.productCnt .customerReviews{
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    gap: 5px;
+}
+
+.productCnt .customerReviews .rating{
+    background-color: green;
+    padding: 0.3rem 0.5rem 0.3rem 0.7rem;
+    border-radius: 20px;
+    color: white; 
+    
+}
+.productCnt .customerReviews .rating span{
+    position: relative;
+    bottom: 1px;
+}
+.productCnt .customerReviews .reviews {
+    font-size: 14px; 
+}
+
+
+
+/* ------------------------------RESPONSIVENESS BREAK POINTS------------------------- */
+
+@media screen and (max-width: 1024px) {
+    .productCnt .productDiv{ 
+        width: 290px;
+        max-width: 290px;
+    }
 }

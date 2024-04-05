@@ -31,8 +31,8 @@ function randomDiscount(discount){
 }
 
   return (
-    <div className='cart'>
-       <div className='cartContainer'>
+    <div className='productCnt'>
+       <div className='products'>
 
          {(products.length>0) && products.map((product, index) => {
           const gotDiscount = randomDiscount([10, 20, 30, 40]);
@@ -52,9 +52,9 @@ function randomDiscount(discount){
                 <span className='discountSpan'>{`  ${gotDiscount}% off`}</span>
                 </h3>
                  <p className="freeDelivery-btn">Free Delivery</p>
-                 <div className='customerReviews'>
-                 <p className='rating'>{product?.rating?.rate}</p>
-                 <p className='review'>{product?.rating?.count}</p>
+                <div className='customerReviews'>
+                <p className='rating' style={{backgroundColor: product.rating.rate > 3 ? "green" : "rgb(244, 182, 25)"}}>{product.rating.rate} <span>&#9733;</span> </p> 
+                 <p className='reviews'>{product.rating.count} Reviews</p>
                  </div> 
               </div>
             </div>

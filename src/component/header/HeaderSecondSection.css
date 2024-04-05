@@ -103,22 +103,21 @@
 
 
 /* ------------------------------RESPONSIVENESS BREAK POINTS------------------------- */
-@media screen and (max-width: 769px) {
-    .header-second-section-item {
-        padding: 0 10px 0;
-    }
-
-    .header-second-section {
-        padding: 0 10px;
-    }
-}
-
+ 
 @media screen and (max-width: 769px) {
 
     .header-second-section-item.home-list,
     .header-second-section-item.beauty-list,
     .item.sleewear {
         display: none;
+    }
+
+    .header-second-section-item {
+        padding: 0 10px 0;
+    }
+
+    .header-second-section {
+        padding: 0 10px;
     }
 
     .header-secondSec-drop-cont {
