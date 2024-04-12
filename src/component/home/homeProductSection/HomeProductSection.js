@@ -6,8 +6,7 @@ function HomeProductSection() {
 
 const [products, setProducts] = useState([]) 
 
-useEffect(() => {
-    console.log("jii")
+useEffect(() => { 
   axios.get("http://localhost:8000/allProducts")
   .then((result) => {
         if(result.data.status === 200){
@@ -32,6 +31,23 @@ function randomDiscount(discount){
 
   return (
     <div className='productCnt'>
+
+       <div className='productFilter'>
+           <div className='productCnt'>
+             <div className='sortingCnt'>
+              <div className='sortBy'>
+                  
+              </div>
+              <div className='sortingList'>
+                <p>Relevance</p>
+                <p>Price (Low to High)</p>
+                <p>Price (High to Low)</p>
+              </div>
+             </div>
+           </div>
+       </div>
+
+
        <div className='products'>
 
          {(products.length>0) && products.map((product, index) => {
