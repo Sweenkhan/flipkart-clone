@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
-import "./HomeProductSection.css"
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+
+import "./HomeProductSection.css" 
+
 
 function HomeProductSection() {
 
 const [products, setProducts] = useState([]) 
+const [sortByValue, setSortByValue] = useState("Relevance");
+const [showSortBy, setShowSortBy] = useState(false)
 
 useEffect(() => { 
   axios.get("http://localhost:8000/allProducts")
@@ -29,19 +35,30 @@ function randomDiscount(discount){
  return discount[Math.floor(Math.random() * discount.length)]
 }
 
+
+function handleSortByClick(e){
+  e.preventDefault()
+  return showSortBy ? setShowSortBy(false) : setShowSortBy(true)
+}
+console.log(showSortBy)
+
   return (
     <div className='productCnt'>
 
        <div className='productFilter'>
-           <div className='productCnt'>
+           <div className='productFilterList'>
              <div className='sortingCnt'>
-              <div className='sortBy'>
-                  
+              <div className='sortBy' onClick={(e) => handleSortByClick(e) }>
+                  <p className='byTag'>Sort by:</p>
+                  <p>{sortByValue}</p>
+                   <p className="sortIcon">
+                  {showSortBy ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon /> }
+                   </p>  
               </div>
-              <div className='sortingList'>
-                <p>Relevance</p>
-                <p>Price (Low to High)</p>
-                <p>Price (High to Low)</p>
+              <div className='sortingList' style={{display: showSortBy ? "block" : "none"}}>
+                <p onClick={(e) => setSortByValue(e.target.innerText)}>Relevance</p>
+                <p onClick={(e) => setSortByValue(e.target.innerText)}>Price (Low to High)</p>
+                <p onClick={(e) => setSortByValue(e.target.innerText)}>Price (High to Low)</p>
               </div>
              </div>
            </div>

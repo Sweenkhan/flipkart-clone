@@ -1,15 +1,79 @@
-.productCnt, .products, .productCnt .productDetail{
+.productCnt, .products, .productCnt .productDetail, .productFilter, .productFilterList{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
-.productCnt .products{
-    flex-wrap: wrap;
+.productCnt{
+    width: 100%;
     margin-top: 100px;
-    gap: 20px; 
+}
+ 
+.productFilter{
+    justify-self: flex-start;
+    background-color: white;
+    min-width: 20%;
 }
 
+.productFilterList{
+  width: 100%;
+}
+
+.sortingCnt{
+    width: 100%;
+    position: relative;
+}
+ 
+.productFilter .sortBy{
+    display: flex;
+    gap: 10px;
+    padding: 0.4rem 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.171); 
+    align-items: center;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.byTag{
+    opacity: 0.6;
+}
+
+.productFilter .sortBy .sortIcon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+} 
+
+.sortingList{
+    border: 1px solid rgba(128, 128, 128, 0.171); 
+    cursor: pointer;  
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+}
+
+.sortingList p{
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.sortingList p:hover{
+    background-color: rgba(187, 240, 222, 0.548);
+}
+
+
+
+.productCnt .products{
+    flex-wrap: wrap; 
+    gap: 20px; 
+}    
+
+ 
 .productCnt .productDiv{
     display: flex;
     justify-content: center; 
