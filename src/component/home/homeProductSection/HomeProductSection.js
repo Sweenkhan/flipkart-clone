@@ -39,8 +39,7 @@ function randomDiscount(discount){
 function handleSortByClick(e){
   e.preventDefault()
   return showSortBy ? setShowSortBy(false) : setShowSortBy(true)
-}
-console.log(showSortBy)
+} 
 
   return (
     <div className='productCnt'>
