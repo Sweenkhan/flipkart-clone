@@ -7,7 +7,6 @@ import Cart from "./component/cart/Cart.js";
 
 export const globalVariable = createContext({});
 
-
 function App() {
   const [data, setData] = useState("");
   return (
