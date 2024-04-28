@@ -1,24 +1,31 @@
-import React, {useContext,} from 'react'
-import { globalVariable } from '../../App'
+import React, { useEffect, useState,} from 'react' 
+import axios from 'axios'
 
 
 function SingleProduct() {
+ 
+    const [productDetail, setProductDetail] = useState({})
+ 
+    useEffect(() => {
+        axios.get(`http://localhost:8000/singleProduct/${localStorage.getItem("id")}`)
+        .then((result) => { 
+             setProductDetail(result.data.productDetail)
+        })
 
-    const {singleProductData} = useContext(globalVariable)
-
-    console.log(singleProductData)
-    console.log(localStorage.getItem("id"))
+    }, [])
 
   return (
     <div className='singleProduct'>
-    <div className='singleProductInner'>
+    { productDetail && <div className='singleProductInner'>
         <div className='productLeft'>
-    
+        <picture >
+            <img width="260" src={productDetail.image} alt="productImage" />
+        </picture>
         </div>
         <div className='productRight'>
 
         </div>
-    </div>
+    </div>}
     
      </div>
   )

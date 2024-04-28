@@ -10,12 +10,11 @@ import SingleProduct from "./component/singleProduct/SingleProduct.js";
 export const globalVariable = createContext({});
 
 function App() {
-  const [data, setData] = useState("");
-  const [singleProductData, setSingleProductData] = useState({})
+  const [data, setData] = useState(""); 
   return (
     <>
       <div className="App">
-        <globalVariable.Provider value={{ data, setData, singleProductData, setSingleProductData}}>
+        <globalVariable.Provider value={{ data, setData}}>
           <BrowserRouter>
           <Header />
             <Routes>

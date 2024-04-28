@@ -1,16 +1,14 @@
-import React, { useEffect, useState, useContext  } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp'; 
-import { globalVariable } from '../../App';
+import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';  
 import { useNavigate } from 'react-router-dom';
 import "./Products.css"
 
 
 
 function Products() {
-
-const {setSingleProductData} = useContext(globalVariable)
+ 
 
 const navigate = useNavigate()
 const [products, setProducts] = useState([]) 
@@ -33,7 +31,7 @@ useEffect(() => {
 // calculating discount with original price.
 function calculateDiscountedPrice(originalPrice, discountPercentage) {
   var discountedPrice = originalPrice - (originalPrice * (discountPercentage / 100));
-  return discountedPrice;
+  return Math.floor(discountedPrice * 83);
 }
  
 // filtering the procut form dropdown.
@@ -44,8 +42,7 @@ function handleSortByClick(e){
 
 function handleProductClick(e, product){
   e.preventDefault();
-  localStorage.setItem("id", product._id)
-  setSingleProductData(product)
+  localStorage.setItem("id", product._id) 
   navigate("/singleProduct")
 }   
 
@@ -86,8 +83,8 @@ function handleProductClick(e, product){
 
                 <p>{(product.title.length > 20) ? `${product.title.substring(0, 20)}...` : product.title}</p>
                 <h3> 
-                ${calculateDiscountedPrice(product.price, product.discount).toFixed(2)} 
-                <span className='originalPrice'>${product.price}</span>
+                <span>&#8377;</span>{calculateDiscountedPrice(product.price, product.discount)} 
+                <span className='originalPrice'><span>&#8377;</span>{Math.floor(product.price * 83)} </span>
                 <span className='discountSpan'>{`  ${product.discount}% off`}</span>
                 </h3>
                  <p className="freeDelivery-btn">Free Delivery</p>
