@@ -8,7 +8,9 @@ function Cart() {
   return (
     <div className='cart'>
         <div className='container'>
-            <div className='cartHeader'></div>
+            <div className='cartHeader'>
+              
+            </div>
             <div className='emptyCartCont'>
             <picture>
                 <img src={cartImg} alt='emptyCartImg' />
