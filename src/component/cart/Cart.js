@@ -16,7 +16,7 @@ function Cart() {
                 <img src={cartImg} alt='emptyCartImg' />
             </picture>
             <h3>Your cart is empty</h3>
-            <div className='viewProductCnt'><Link to="/" >View Products</Link> </div>
+            <div className='viewProductCnt'><Link to="/products" >View Products</Link> </div>
             </div>
         </div>
     </div>
